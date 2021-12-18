@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Bang!",
+    "id": "bang",
+    "path": "/sounds/bang.mp3"
+  },
+  {
+    "name": "Fo Sho!",
+    "id": "fo_sho",
+    "path": "/sounds/fo_sho.mp3"
+  },
+  {
+    "name": "Left hand!",
+    "id": "left_hand",
+    "path": "/sounds/left_hand.mp3"
+  },
+  {
+    "name": "Niice",
+    "id": "niice",
+    "path": "/sounds/niice.mp3"
+  },
+  {
+    "name": "Ooooo",
+    "id": "ooooo",
+    "path": "/sounds/ooooo.mp3"
+  },
+  {
+    "name": "Yeahh, cmon dude",
+    "id": "yeahh_cmon_dude",
+    "path": "/sounds/yeah_cmon_dude.mp3"
+  }
+]

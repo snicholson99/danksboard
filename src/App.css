@@ -1,38 +1,64 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  background-color: #050505;
+  color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 20%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header img {
+  height: 80%;
+}
+
+header img,
+header h1,
+header p {
+  margin: 5px;
+}
+
+#soundcards {
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.soundcard {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  width: 50%;
+  height: calc(100% / 3);
+  background-color: lightslategray;
+  color: black;
+  border: 1px solid #050505;
 }
 
-.App-link {
-  color: #61dafb;
+.soundcard p {
+  margin: 2px;
+  font-size: 1.6rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.soundcard small {
+  font-style: italic;
+}
+
+.soundcard:active {
+  background-color: lightsteelblue;
 }
