@@ -2,31 +2,37 @@
   {
     "name": "Bang!",
     "id": "bang",
-    "path": "/sounds/bang.mp3"
+    "path": "/sounds/bang.mp3",
+    "keyboardBinding": 1
   },
   {
     "name": "Fo Sho!",
     "id": "fo_sho",
-    "path": "/sounds/fo_sho.mp3"
+    "path": "/sounds/fo_sho.mp3",
+    "keyboardBinding": 2
   },
   {
     "name": "Left hand!",
     "id": "left_hand",
-    "path": "/sounds/left_hand.mp3"
+    "path": "/sounds/left_hand.mp3",
+    "keyboardBinding": 3
   },
   {
     "name": "Niice",
     "id": "niice",
-    "path": "/sounds/niice.mp3"
+    "path": "/sounds/niice.mp3",
+    "keyboardBinding": 4
   },
   {
     "name": "Ooooo",
     "id": "ooooo",
-    "path": "/sounds/ooooo.mp3"
+    "path": "/sounds/ooooo.mp3",
+    "keyboardBinding": 5
   },
   {
     "name": "Yeahh, cmon dude",
     "id": "yeahh_cmon_dude",
-    "path": "/sounds/yeah_cmon_dude.mp3"
+    "path": "/sounds/yeah_cmon_dude.mp3",
+    "keyboardBinding": 6
   }
 ]

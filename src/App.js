@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import useSound from 'use-sound';
+import { Howl } from 'howler';
 
 import './App.css';
 import sounds from './sounds.json';
@@ -24,8 +24,9 @@ const useKeyboardBindings = (map) => {
 
 const App = () => {
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  const soundUrl = 'soundboard_sprite.mp3';
-  const [play] = useSound(soundUrl, {
+  
+  const sound = new Howl({
+    src: ['soundboard_sprite.mp3'],
     sprite: {
       bang: [0, 750],
       fo_sho: [2300, 1100],
@@ -36,14 +37,23 @@ const App = () => {
     }
   });
 
+  // TODO: Get this working from sounds.json
+  // useKeyboardBindings(sounds.map(sound => {
+  //   sound.keyboardBinding: () => sound.play(sound.id)
+  // }));
+
   useKeyboardBindings({
-    1: () => play({ id: 'bang' }),
-    2: () => play({ id: 'fo_sho' }),
-    3: () => play({ id: 'left_hand' }),
-    4: () => play({ id: 'niice' }),
-    5: () => play({ id: 'ooooo' }),
-    6: () => play({ id: 'yeahh_cmon_dude' }),
+    1: () => sound.play('bang'),
+    2: () => sound.play('fo_sho'),
+    3: () => sound.play('left_hand'),
+    4: () => sound.play('niice'),
+    5: () => sound.play('ooooo'),
+    6: () => sound.play('yeahh_cmon_dude'),
   });
+
+  const onSoundcardClick = (soundId) => {
+    sound.play(soundId);
+  }
 
   return (
     <div className="App">
@@ -56,9 +66,9 @@ const App = () => {
       </header>
       <div id="soundcards">
         {sounds.map((sound, i) => (
-          <div key={i} className="soundcard" aria-label={sound.id} onClick={() => play({ id: sound.id })}>
+          <div key={i} className="soundcard" aria-label={sound.id} onClick={() => onSoundcardClick(sound.id)}>
             <p>{sound.name}</p>
-            {!isMobile && <small>Keyboard Binding: {i + 1}</small>}
+            {!isMobile && <small>Keyboard Binding: {sound.keyboardBinding}</small>}
           </div>
         ))}
       </div>
