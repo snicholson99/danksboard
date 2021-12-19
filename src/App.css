@@ -1,6 +1,6 @@
 .App {
   height: 100vh;
-  background-color: #050505;
+  background-color: #0f0f0f;
   color: white;
 }
 
@@ -19,6 +19,12 @@ header > div {
 
 header img {
   height: 80%;
+}
+
+header img:active,
+header img:hover,
+header img:focus {
+  animation: spin 1s forwards;
 }
 
 header img,
@@ -45,8 +51,8 @@ header p {
   cursor: pointer;
   width: 50%;
   height: calc(100% / 3);
-  background-color: lightslategray;
-  color: black;
+  background-color: #1e1e1e;
+  color: white;
   border: 1px solid #050505;
 }
 
@@ -60,5 +66,14 @@ header p {
 }
 
 .soundcard:active {
-  background-color: lightsteelblue;
+  background-color: #383838;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

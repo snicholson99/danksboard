@@ -66,10 +66,10 @@ const App = () => {
       </header>
       <div id="soundcards">
         {sounds.map((sound, i) => (
-          <div key={i} className="soundcard" aria-label={sound.id} onClick={() => onSoundcardClick(sound.id)}>
+          <button key={i} className="soundcard" aria-label={sound.id} onClick={() => onSoundcardClick(sound.id)}>
             <p>{sound.name}</p>
             {!isMobile && <small>Keyboard Binding: {sound.keyboardBinding}</small>}
-          </div>
+          </button>
         ))}
       </div>
     </div>
